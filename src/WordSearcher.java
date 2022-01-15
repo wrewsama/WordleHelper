@@ -89,7 +89,9 @@ public class WordSearcher {
         try {
             for (i = 0; i < yellowInput.length(); i += 2) {
                 char letter = yellowInput.charAt(i);
-                yellowList.add(letter);
+                if (!yellowList.contains(letter)) {
+                    yellowList.add(letter);
+                }
             }
         } catch (Exception e) {
             System.out.println("Error at " + i);
@@ -106,7 +108,9 @@ public class WordSearcher {
         try {
             for (i = 0; i < blackInput.length(); i += 2) {
                 char letter = blackInput.charAt(i);
-                blackList.add(letter);
+                if (!blackList.contains(letter)) {
+                    blackList.add(letter);
+                }
             }
         } catch (Exception e) {
             System.out.println("Error at " + i);

@@ -16,7 +16,6 @@ public class Main {
             ws.updateInputs();
             if (!ws.getSolved()) {
                 WordRanker wr = new WordRanker(ws.generateWordList(), analyseWords());
-                ws.printWordList();
                 wr.printBestWords();
             }
         }
